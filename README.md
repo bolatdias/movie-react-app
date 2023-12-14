@@ -1,4 +1,4 @@
-![ezgif com-video-to-gif-converted](https://github.com/bolatdias/movie-react-app/assets/133090331/4c5b82fa-86bf-49f1-be67-dc4e5d49db86)# Your React Project Name
+# Your React Project Name
 
 "The Movie React App is an interactive and user-friendly web application built with React.js. It provides users with a seamless experience to explore and discover a vast collection of movies and TV shows. Users can search for their favorite titles, view detailed information about each movie, and even watch trailers. The app offers a responsive design, making it accessible across various devices, and incorporates modern features such as dynamic search, a user-friendly interface, and a visually appealing display of movie details. Dive into the world of cinema with the Movie React App, where entertainment meets technology."
 
@@ -35,4 +35,4 @@ After installation start servet `npm start`
 `localhost:3000`
 
 ## Demo
-![Uploading ezgif.com-video-to-gif-converted.gif…]()
+![ezgif com-video-to-gif-converted](https://github.com/bolatdias/movie-react-app/assets/133090331/4c5b82fa-86bf-49f1-be67-dc4e5d49db86)
