@@ -1,0 +1,38 @@
+.background-img {
+    width: 100vw;
+    display: flex;
+    overflow-x: hidden;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: -1;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.white-container {
+    position: absolute;
+    top: 700px;
+    width: 100vw;
+    height: 700px;
+    background-color: white;
+    z-index: -1;
+}
+
+.landing-title {
+    font-weight: 700;
+    font-size: 56px;
+    width: 600px;
+    margin-top: 400px;
+}
+
+.white-font{
+    color: white;
+}
+
+.info-container{
+    margin-top: 250px;
+    margin-bottom: 150px;
+}

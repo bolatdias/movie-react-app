@@ -37,7 +37,10 @@
 
 .recomadation-title{
     margin-top: 40px;
-    margin-left: 10px;
+}
 
+.genre-text{
+    margin-left: 10px;
+    font-size: large;
 }
 

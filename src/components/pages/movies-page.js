@@ -5,9 +5,9 @@ import MoviesRowList from '../movies-row-list';
 const MoviesPage = ({ movieService }) => {
     return (
         <div>
-            <MoviesRowList title={'Now Playing'} func={movieService.getNowPlayingMovies} movieService={movieService} />
-            <MoviesRowList title={'Popular'} func={movieService.getTopFilmes} movieService={movieService}/>
-            <MoviesRowList title={'Upcoming'} func={movieService.getUpCommingFilmes} movieService={movieService} />
+            <MoviesRowList title={'Now Playing'} func={movieService.getNowPlayingMovies(1)} movieService={movieService} />
+            <MoviesRowList title={'Popular'} func={movieService.getTopFilmes(1)} movieService={movieService}/>
+            <MoviesRowList title={'Upcoming'} func={movieService.getUpCommingFilmes(1)} movieService={movieService} />
         </div>
     );
 };
