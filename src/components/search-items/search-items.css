@@ -1,0 +1,71 @@
+.search-movie-card {
+    width: 100%;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 20px;
+    margin-top: 20px;
+    max-height: 150px;
+}
+
+.search-movie-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.search-movie-card img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px; /* Add some spacing between the image and text */
+    border-radius: 20px 0 0 20px;
+}
+
+.search-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-movie-card h5,
+.search-movie-card p {
+    margin-top: 10px;
+    width: 60vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.search-container{
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.search-text-container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pagination{
+    width: 35vw;
+    min-width: 500px;
+    margin: 50px auto;
+}
+
+.pagination a{
+    margin: auto;
+}
+.pagination button {
+    width: 200px;
+    margin: auto;
+    padding: 5px 50px;
+    border: 2px solid red;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out; /* Adding a transition for a smoother effect */
+    white-space: nowrap;
+    text-overflow: ellipsis;    
+}
+
+.pagination button:hover {
+    background-color: #ffdddd; /* Change the background color on hover */
+}

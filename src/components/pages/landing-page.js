@@ -15,7 +15,6 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchVideo = async () => {
       try {
-        const movieService = new MovieService(); // Initialize your MovieService
         const videoData = await movieService.getVideoById(id);
         setVideo(videoData);
       } catch (error) {

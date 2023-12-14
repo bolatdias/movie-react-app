@@ -147,15 +147,31 @@ export default class MovieService {
         const res = await this.getResource(url, options);
 
         if (res && res.results && res.results.length > 0) {
-          const officialTrailer = res.results.find(
-            (video) => video.type === 'Trailer' && video.official === true
-          );
+            const officialTrailer = res.results.find(
+                (video) => video.type === 'Trailer' && video.official === true
+            );
 
-          if (officialTrailer) {
-            return officialTrailer;
-          }
+            if (officialTrailer) {
+                return officialTrailer;
+            }
         }
-      
+
         return null;
+    };
+
+
+
+    getSearchedMovies = async (query, page) => {
+        const url = `/3/search/movie?query=${query}&include_adult=true&language=en-US&page=${page}`;
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json', 
+                Authorization: this._token,
+            },
+        };
+
+        const res = await this.getResource(url, options);
+        return res;
     };
 }

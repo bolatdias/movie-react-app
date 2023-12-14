@@ -19,18 +19,18 @@ const MovieLandingInfo = ({ id, movieService, video }) => {
     }, [id, movieService]);
 
     return (
-        <div>
+        <div className="info">
             <img
-                className="background-img"
+                className="background-img d-sm-none d-md-block d-lg-block"
                 src={movieService.getBackgroundImageByMovie(movieDetails)}
-                alt={movieDetails.original_title}
+                alt={movieDetails.title}
             />
             <div className="white-container" />
 
             <div className="container">
-                <h2 className="landing-title text-white">{movieDetails.original_title}</h2>
+                <h2 className="landing-title">{movieDetails.title}</h2>
                 {movieDetails.release_date && (
-                    <p className="text-white">
+                    <p className="landing-text">
                         {movieDetails.release_date.slice(0, 4)} |
                         {movieDetails.genres && movieDetails.genres.map((genre) => (
                             <span key={genre.id} className="genre-text">

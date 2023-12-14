@@ -14,7 +14,7 @@ body{
 
 .white-container {
     position: absolute;
-    top: 700px;
+    top: 35vw;
     width: 100vw;
     height: 700px;
     background-color: white;
@@ -25,14 +25,39 @@ body{
     font-weight: 700;
     font-size: 56px;
     width: 600px;
-    margin-top: 400px;
+    margin-top: 20vw;
+    color: white;
 }
-
-.white-font{
+.landing-text{
     color: white;
 }
 
+
+
 .info-container{
-    margin-top: 250px;
+    margin-top: 10vw;
     margin-bottom: 150px;
+}
+
+iframe{
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .movie-card img {
+        height: 150px;
+        width: 100px;
+    }
+
+    .landing-title {
+        color: black;
+    }
+
+    .landing-text {
+        color: black;
+    }
+
+    .background-img {
+        display: none;
+    }
 }

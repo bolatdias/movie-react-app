@@ -1,10 +1,10 @@
-.movie-row{
+.movie-row {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 
-.movie-container{
+.movie-container {
     overflow: auto;
 }
 
@@ -16,31 +16,43 @@
     background-color: transparent;
 }
 
-.movie-card{
+.movie-card {
     margin: 10px;
     text-align: left;
 }
 
-.movie-card img{
+.movie-card img {
     border-radius: 5%;
     height: 250px;
     width: 166px;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
-.movie-card p{
+.movie-card img:hover {
+    transform: scale(1.1);
+}
+
+.movie-card p {
     margin-top: 10px;
     padding: 0;
     margin-bottom: 0px;
 }
 
 
-.recomadation-title{
+.recomadation-title {
     margin-top: 40px;
 }
 
-.genre-text{
+.genre-text {
     margin-left: 10px;
     font-size: large;
 }
 
+
+@media (max-width: 768px) {
+    .movie-card img {
+        height: 150px;
+        width: 100px;
+    }
+}
