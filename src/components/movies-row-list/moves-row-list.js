@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import './movies-row-list.css'
 
-const MoviesRowList = ({ title, func, movieService }) => {
+const MoviesRowList = ({ title, func, movieService, isTVshow }) => {
     const [movies, setMovies] = useState([]);
 
     const fetchMovies = async () => {
@@ -26,10 +26,16 @@ const MoviesRowList = ({ title, func, movieService }) => {
                 <div className="movie-row">
                     {movies.map((movie) => (
                         <div className='col movie-card' key={movie.id}>
-                            <Link to={`/movie/${movie.id}`}>
-                                <img src={movieService.getPosterImageByMovie(movie)} alt={movie.title} />
-                            </Link>
-                            <p>{movie.release_date.slice(0, 4)}</p>
+                            {isTVshow ? (
+                                <Link to={`/tvshow/${movie.id}`}>
+                                    <img src={movieService.getPosterImageByMovie(movie)} alt={movie.title} />
+                                </Link>
+                            ) : (
+                                <Link to={`/movie/${movie.id}`}>
+                                    <img src={movieService.getPosterImageByMovie(movie)} alt={movie.title} />
+                                </Link>
+                            )}
+                            {isTVshow ? <p>{movie.first_air_date.slice(0, 4)}</p> : <p>{movie.release_date.slice(0, 4)}</p>}
                             <h6>{movie.title}</h6>
                         </div>
                     ))}

@@ -32,7 +32,7 @@ const SearchItems = ({ movieService }) => {
 
     return (
         <div className='container mt-5 mb-5'>
-            <h2 id='start'>Searching results - {totalResults} movies</h2>
+            <h2>Searching results - {totalResults} movies</h2>
             {movies.map((movie) => (
                 <div className='search-movie-card' key={movie.id}>
                     <Link to={`/movie/${movie.id}`} className='search-container'>

@@ -166,7 +166,7 @@ export default class MovieService {
         const options = {
             method: 'GET',
             headers: {
-                accept: 'application/json', 
+                accept: 'application/json',
                 Authorization: this._token,
             },
         };
@@ -174,4 +174,53 @@ export default class MovieService {
         const res = await this.getResource(url, options);
         return res;
     };
+
+
+    getMoviesByGenreID = async (genre_id, page) => {
+        const url = `/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc&with_genres=${genre_id}`;
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: this._token,
+            },
+        };
+
+        const res = await this.getResource(url, options);
+        return res;
+    };
+
+
+    TVshowsList = { AIRING_TODAY: 'airing_today', ON_THE_AIR: 'on_the_air', POPULAR: 'popular' };
+
+    getListTvShows = async (page, query) => {
+        const url = `/3/tv/${query}?language=en-US&page=${page}`
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: this._token,
+            },
+        };
+
+        const res = await this.getResource(url, options);
+        return res;
+    }
+
+
+    
+    getTVShowDetailsById = async (id) => {
+        const url = `/3/tv/${id}?language=en-US`;
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: this._token,
+            },
+        };
+
+        const res = await this.getResource(url, options);
+        return res;
+    }
+
 }

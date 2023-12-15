@@ -5,6 +5,7 @@ import MoviesRowList from "../movies-row-list"
 import { useState } from "react"
 import { useEffect } from "react"
 import { useParams } from "react-router-dom"
+import MovieGenreItem from "../movies-genres-list"
 const LandingPage = () => {
 
   const { id } = useParams();
